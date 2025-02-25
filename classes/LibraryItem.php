@@ -48,7 +48,7 @@ class LibraryItem {
         return $this->title . "<br>" . $this->author . "<br>" . $this->publicationYear;
     }
     
-    public function validateYear(int $year): bool {
+    protected function validateYear(int $year): bool {
         $yearString = (string)$year;
 
         $date = DateTime::createFromFormat("Y", $yearString);

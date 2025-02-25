@@ -18,6 +18,8 @@ class DVD extends LibraryItem {
     public function setDuration(int $duration) {
         if ($this->validateDuration($duration)) {
             $this->duration = $duration;
+        } else {
+            throw new Exception("Invalid duration.");
         }
     }
 
